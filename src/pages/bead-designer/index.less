@@ -1,0 +1,159 @@
+@import "../../styles/func.less";
+
+.bead_designer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+  overflow: hidden;
+
+  .title {
+    margin: 0 0 16px 0;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+
+    .left_panel {
+      flex: 0 0 360px;
+      margin-right: 16px;
+
+      .upload_card {
+        margin-bottom: 16px;
+
+        :global {
+          .ant-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+
+        .upload_text {
+          margin-top: 8px;
+        }
+      }
+
+      .param_card {
+        .param_row {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+
+          .param_label {
+            margin-right: 4px;
+          }
+
+          .param_input {
+            flex: 1;
+          }
+        }
+
+        .param_switch {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 8px;
+        }
+
+        .param_btn {
+          width: 100%;
+          margin-top: 4px;
+        }
+
+        .size_info {
+          color: #888;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .right_panel {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+
+      .design_area {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-width: 0;
+
+        .design_card {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+
+          :global {
+            .ant-card-body {
+              display: flex;
+              flex: 1;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+            }
+          }
+
+          .bead_preview {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            image-rendering: pixelated;
+          }
+
+          .placeholder {
+            color: #999;
+            text-align: center;
+          }
+        }
+      }
+
+      .stat_area {
+        flex: 0 0 200px;
+        margin-left: 16px;
+        overflow-y: auto;
+
+        .stat_card {
+          .stat_total {
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid @border_color;
+          }
+
+          .color_list {
+            .color_item {
+              display: flex;
+              align-items: center;
+              margin-bottom: 4px;
+
+              .color_swatch {
+                width: 14px;
+                height: 14px;
+                border-radius: 2px;
+                margin-right: 8px;
+                border: 1px solid #d9d9d9;
+                flex-shrink: 0;
+              }
+
+              .color_hex {
+                font-size: 12px;
+                color: #888;
+                flex: 1;
+              }
+
+              .color_count {
+                font-size: 12px;
+                color: #666;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

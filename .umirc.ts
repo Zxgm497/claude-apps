@@ -12,6 +12,8 @@ export default defineConfig({
   routes: [
     { path: "/", redirect: "/welcome" },
     { path: "/welcome", component: "welcome" },
+    { path: "/bead-designer", component: "bead-designer" },
   ],
   npmClient: "npm",
+  mfsu: false,
 });
